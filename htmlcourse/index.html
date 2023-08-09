@@ -9,9 +9,10 @@
         <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <body>
+        <header>
         <h1>A Mixed Bag</h1>
         <hr>
-        <nav>
+        <nav aria-label="primary-navigation">
             <ul>
                 <li>
                     <a href="#html">Learning HTML</a>
@@ -21,27 +22,30 @@
                 </li>
             </ul>
         </nav>
+        </header>
         <hr>
-        <section id="html">
+        <main>
+        <article id="html">
         <h2>What is HTML?</h2>
         <figure>
-        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="The HTML5 Logo" width="300" height="300"> 
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="The HTML5 Logo" width="200" height="200"> 
         <figcaption>An example of HTML5 code</figcaption>
         <p>
             <code>&lt;h1&gt;Hello World!&lt;h1&gt;</h1></code>
         </p>
         </figure>
         <p>HTML expands to <em>Hyper Text Markup Language</em>.</p>
-
-        <h3>Name of the instructor:</h3>
+        <hr>
+        <section>
+        <h3>Name of the instructor?</h3>
         <p>This course is being taught by <strong>Dave Gray</strong>. He uses resources from <abbr title="Mozilla Developer Network">
             <a href="https://developer.mozilla.org/">MDN</a>
         </abbr>.</p>
         <h3>Where is this course available?</h3>
         <p>This course is available on <strong>YouTube</strong>.</p>
-
+        </section>
         <hr>
-
+        <section>
         <h3>Name of the student?</h3>
         <p>This course is being learnt by <strong>Geedhavarshini</strong>.</p>
         <h3>Where does this student live?</h3>
@@ -56,9 +60,37 @@
             Vellore - 632001
         </address>
         <br>
+        <aside>
+            <details>
+                <summary>Guess the <mark>number of hours</mark> the student codes per day.</summary>
+                <p>The student starts coding at <time datetime="05:00">5 AM</time> and continues to code for <time datetime="PT3H">3 hours</time>.</p>
+            </details>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <time datetime="05:00">5.00 AM</time> - <time datetime="08:00">8.00 AM</time>
+                    </td>
+                    <td>Write Code</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="08:00">8.00 AM</time> - <time datetime="09:00">9.00 AM</time>
+                    </td>
+                    <td>Eat Breakfast</td>
+                </tr>
+                <tr>
+                    <td>
+                        <time datetime="09:00">9.00 AM</time> - <time datetime="13:00">1.00 PM</time>
+                    </td>
+                    <td>Study for Other Courses</td>
+                </tr>
+            </table>
+        </aside>
         </section>
+        </article>
         <hr>
-        <section id="likelists">
+        <article id="likelists">
         <!--This is a comment.-->
         <h3>Completely irrelevant information about the student:</h3>
         <p>The student thinks that <em>donuts</em> are overrated.<br>The student also thinks that <em>upma</em> is the best.<br>So, in, conclusion, donuts &lt;&lt;&lt; upma.</p>
@@ -102,10 +134,11 @@
             <dd>Helps you survive this cruel, cruel world.</dd>
         </dl>
         <br>
-        </section>
+    </article>
+        </main>
         <hr>
-        &lt;&lt;&lt; &copy;<a href="about.html">Geedhavarshini</a>&gt;&gt;&gt;
+        <p>&lt;&lt;&lt; &copy;<a href="about.html">Geedhavarshini</a>&gt;&gt;&gt;</p>
         <br>
-        <a href="#">Back to top</a>
+        <p><a href="#">Back to top</a></p>
     </body>
 </html> 
