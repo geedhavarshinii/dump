@@ -1,0 +1,19 @@
+.title {
+    color: orange;
+}
+
+.subtitle:hover {
+    color: brown;
+}
+
+#contact-us{
+    color: green;
+}
+
+#google-link:link {
+    color: blue;
+}
+
+#google-link:visited {
+    color:red; 
+}
