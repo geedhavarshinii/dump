@@ -8,16 +8,16 @@
         <title>My Website</title>
     </head>
     <body>
-        <h1 class="title">My Website</h1>
+        <h1 id="title">My Website</h1>
  
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <p class="para-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <h2 class="subtitle article-subtitle">About Me</h2>
+        <h2 class="subtitle">About Me</h2>
 
         <img src="img/vacation.jpg" >
 
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+        <p class="para-text">Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -29,15 +29,13 @@
         Cillum dolore eu fugiat nulla , pariatur:
 
             <ul>
-                <li>Excepteur sint occaecat</li>
-                <li>cupidatat non proident</li>
-                <li>sunt in culpa.</li>
-                <li><ol>My Ordered List that has a descendent.<li>the descendent</li></ol></li>
+                <li class="list-item">Excepteur sint occaecat</li>
+                <ol>My Ordered List that has a descendent.<li class="list-item">the descendent</li></ol>
             </ul>
         </p>
 
-        <h2 >Services</h2>
-        <a href="https://www.google.com" id="google-link">Click here to go to Google.</a>
+        <h2 class="subtitle">Services</h2>
+        <a href="https://www.google.com" class="link">Click here to go to Google.</a>
         <table border="1">
             <thead>
                 <tr>
@@ -64,12 +62,12 @@
 
         <img src="img/caribbean.jpg">
 
-        <h2 id="contact-us">Contact Us</h2>
+        <h2 class="subtitle">Contact Us</h2>
 
         <form>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email">
-            <textarea></textarea>
+            <input type="text" placeholder="Full Name" class="form-input">
+            <input type="email" placeholder="Email" class="form-input">
+            <textarea placeholder="Your Message" class="form-input"></textarea>
             <button>Submit</button>	
 
         </form>
