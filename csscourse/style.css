@@ -1,5 +1,6 @@
 body {
-    background: rgb(240, 240, 240);
+    /*background: rgb(240, 240, 240, 1);*/
+    background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));
 }
 
 #title {
@@ -7,10 +8,18 @@ body {
 }
 
 .subtitle {
-    color: rgb(222, 87, 47);
-    background: rgb(200, 200, 200);
+    color: rgb(227, 225, 224);
+    background: linear-gradient(to right, rgb(177, 79, 79), rgb(240, 240, 100));
 }
 
+#service-image{
+    height: 400px;
+    width: 70%;
+
+    background: url("img/sunset02.jpeg");
+    background-size: cover;
+    background-color: steelblue;
+}
 
 
 
