@@ -1,6 +1,7 @@
 body {
-    /*background: rgb(240, 240, 240, 1);*/
-    background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));
+    /*background: rgb(240, 240, 240, 1);
+    background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));*/
+    background: radial-gradient(yellow, orange, red);
 }
 
 #title {
@@ -9,7 +10,7 @@ body {
 
 .subtitle {
     color: rgb(227, 225, 224);
-    background: linear-gradient(to right, rgb(177, 79, 79), rgb(240, 240, 100));
+    /*background: linear-gradient(to right, rgb(177, 79, 79), rgb(240, 240, 100));*/
 }
 
 #service-image{
