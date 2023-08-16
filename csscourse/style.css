@@ -1,18 +1,23 @@
 body {
     /*background: rgb(240, 240, 240, 1);
     background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));*/
-    background: radial-gradient(yellow, orange, red);
+    background: radial-gradient(white, yellow, orange, red, brown);
     text-align: justify;
-    font-size: 1.15em;
+    font-size: 1.05em;
+    color: rgb(72, 65, 9);
+    font-family: 'Nunito Sans', sans-serif;
+
 }
 
 #title {
     color: rgb(234, 215, 69);
     text-align: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 .subtitle {
     color: rgb(234, 215, 69);
+    font-family: 'Roboto Slab', serif;
     /*background: linear-gradient(to right, rgb(177, 79, 79), rgb(240, 240, 100));*/
 }
 
