@@ -57,6 +57,29 @@ body {
     margin: 10px;
 }
 
+.container {
+    background-color: orange;
+    margin: 10px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; /*horizontal alignment*/ 
+    align-items: center;
+}
+
+
+.container-item {
+    background: yellow;
+    color: rgb(231, 106, 17);
+    font-size: 25px;
+    text-align: center;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
 
 
 
