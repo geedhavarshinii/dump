@@ -2,14 +2,17 @@ body {
     /*background: rgb(240, 240, 240, 1);
     background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));*/
     background: radial-gradient(yellow, orange, red);
+    text-align: justify;
+    font-size: 1.15em;
 }
 
 #title {
-    color: rgb(222, 64, 16);
+    color: rgb(234, 215, 69);
+    text-align: center;
 }
 
 .subtitle {
-    color: rgb(227, 225, 224);
+    color: rgb(234, 215, 69);
     /*background: linear-gradient(to right, rgb(177, 79, 79), rgb(240, 240, 100));*/
 }
 
@@ -20,6 +23,14 @@ body {
     background: url("img/sunset02.jpeg");
     background-size: cover;
     background-color: steelblue;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.italics {
+    font-style: oblique;
 }
 
 
