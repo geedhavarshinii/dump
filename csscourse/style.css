@@ -23,13 +23,15 @@ body {
 
 #service-image{
     height: 300px;
-    width: 50%;
+    width: 30%;
 
     background: url("img/sunset02.jpeg");
     background-size: cover;
     background-color: steelblue;
 
     border: 5px solid rgb(72, 65, 9);
+
+    display: block;
 }
 
 .link {
@@ -41,10 +43,18 @@ body {
 }
 
 #about-us-image {
-    height: 100 px;
-    width: 50%;
+    height: 200px;
+    width: 30%;
     border: 5px solid rgb(72, 65, 9);
-    padding: 
+    margin: 10px;
+    float: right;
+    /*display: inline-block;*/
+}
+
+.site-table {
+    /*display: none;*/
+    float: right;
+    margin: 10px;
 }
 
 
