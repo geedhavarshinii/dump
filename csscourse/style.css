@@ -1,7 +1,7 @@
 body {
     /*background: rgb(240, 240, 240, 1);
     background: linear-gradient(to bottom, rgb(240, 240, 100), rgb(177, 79, 79));*/
-    background: radial-gradient(white, yellow, orange, red, brown);
+    background: radial-gradient(white, yellow, orange, red);
     text-align: justify;
     font-size: 1.05em;
     color: rgb(72, 65, 9);
@@ -22,12 +22,14 @@ body {
 }
 
 #service-image{
-    height: 400px;
-    width: 70%;
+    height: 300px;
+    width: 50%;
 
     background: url("img/sunset02.jpeg");
     background-size: cover;
     background-color: steelblue;
+
+    border: 5px solid rgb(72, 65, 9);
 }
 
 .link {
@@ -36,6 +38,13 @@ body {
 
 .italics {
     font-style: oblique;
+}
+
+#about-us-image {
+    height: 100 px;
+    width: 50%;
+    border: 5px solid rgb(72, 65, 9);
+    padding: 
 }
 
 
