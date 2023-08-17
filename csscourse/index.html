@@ -67,16 +67,26 @@
         <div id="service-image"></div>
 
         <div class="container">
-            <div class="container-item" style="order:4; flex-grow: 0;flex-shrink: 1; flex-basis: 100px;">B</div>
-            <div class="container-item" style="order:3; flex-grow: flex-shrink: ; flex-basis: ;">C</div>
-            <div class="container-item" style="order:5; flex-grow: flex-shrink: ; flex-basis: ;">D</div>
-            <div class="container-item" style="order:1; flex-grow: flex-shrink: ; flex-basis: ;">E</div>
-            <div class="container-item" style="order:2; flex-grow: flex-shrink: ; flex-basis: ;">A</div>
+            <div class="container-item" style="order:4; flex: 0 1 100px; align-self: center;">B</div>
+            <div class="container-item" style="order:3; flex: 0 1 100px; align-self: flex-end;">C</div>
+            <div class="container-item" style="order:5; flex: 0 1 100px; align-self: flex-start;">D</div>
+            <div class="container-item" style="order:1; flex: 0 1 100px; align-self: flex-start;">E</div>
+            <div class="container-item" style="order:2; flex: 0 1 100px; align-self: center;">A</div>
             <!---<div class="container-item">F</div>
             <div class="container-item">G</div>
             <div class="container-item">H</div>
             <div class="container-item">I</div>
             <div class="container-item">J</div>--->
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item" style="background: rgb(255, 150, 150); grid-area: 1 / 1 / span 1 / span 1;">1</div>
+            <!---grid-column: 1 / span 3; grid-row: 2 / span 2;--->
+            <div class="grid-item" style="background: rgb(170, 255, 140);">2</div>
+            <div class="grid-item" style="background: rgb(222, 132, 255);">3</div>
+            <div class="grid-item" style="background: rgb(255, 207, 119);">4</div>
+            <div class="grid-item" style="background: rgb(140, 210, 255);">5</div>         
+            <div class="grid-item" style="background: rgb(255, 203, 200);">6</div>         
         </div>
 
         <h2 class="subtitle">Contact Us</h2>
