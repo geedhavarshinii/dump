@@ -2,7 +2,9 @@ html{
     font-size: 22px;
 }
 body{
-    background-color:gold;
+    background: linear-gradient(to bottom, rgb(254, 186, 58), rgb(245, 245, 46), gold, yellow, orange);
+    /*background-color:gold;*/
+    /*background: linear-gradient(to bottom, orange, gold, yellow, gold, orange)*/
     color:brown;
     min-height: 100vh;
     max-width:800px;
@@ -16,4 +18,54 @@ th, td, caption{
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5rem;
+}
+
+.container{
+    /*background: linear-gradient(to bottom,rgb(245, 245, 46), gold, yellow);*/
+    background-color: orange;
+    margin: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-item {    
+    text-decoration: none;
+    background: gold;
+    color: rgb(231, 106, 17);
+    font-size: 20px;
+    text-align: center;
+    width: 70px;
+    line-height: 50px;
+    margin: 10px;
+}
+
+#intro-img {
+    border: 5px solid rgb(72, 6, 9);
+    margin: 10px;
+    float: right;
+}
+
+#hours-img {
+    width: 370px;
+    height: 260px;
+    border: 2px solid rgb(72, 65, 9);
+    margin: 10px;
+    float: right;
+}
+
+.contact-img {
+    width: 780px;
+    height: 400px;
+    background-color: orange;
+    margin: 10px;
+    display: grid;
+    align-items: center;
+}
+
+.contact-img-item {
+    width: 400px;
+    height: 260px;
 }
