@@ -10,11 +10,14 @@ body{
     max-width:800px;
     margin: 0 auto;
     padding: 1rem;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
+    /*border-left: 1px solid #eee;
+    border-right: 1px solid #eee;*/
+    border-left: 1px solid brown;
+    border-right: 1px solid brown;
 }
 th, td, caption{
-    border: 1px solid #eee;
+    /*border: 1px solid #eee;*/
+    border: 1px solid brown;
     font-family: 'Courier New', Courier, monospace;
     border-collapse: separate;
     padding: 0.5rem;
@@ -56,7 +59,14 @@ th, td, caption{
     float: right;
 }
 
-.contact-img {
+#contact-img-id {
+    /*width: 400px;
+    height: 346px*/
+    border: 10px solid orange;
+    float: right;
+}
+
+/*.contact-img {
     width: 780px;
     height: 400px;
     background-color: orange;
@@ -68,4 +78,5 @@ th, td, caption{
 .contact-img-item {
     width: 400px;
     height: 260px;
-}
+    border: 10px solid orange;
+}*/
