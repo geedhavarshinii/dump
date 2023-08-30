@@ -12,30 +12,20 @@
     </head>
     <body>
         <div class="container">
-            <div class="card-group">
-                <div class="card" style="width: 300px;">
-                    <h2 class="card-header">Header</h2>
-                    <img class="card-img-top" src="placeholder_image.png"></img>
-                    <div class="card-body">
-                        <h2 class="card-title">Title</h2>
-                        <span class="card-subtitle">Subtitle</span>
-                        <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quaerat odio quia quibusdam accusantium fuga, tempora numquam dolorum, esse magni expedita enim in nobis vel a, minus ipsam sapiente maxime.
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">Open</button>
+
+            <div class="modal fade" id="modal">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="model-content">
+                        <div class="modal-header">
+                            <h2>header</h2>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio corporis culpa laudantium nam non libero voluptate ex, optio, rerum et consequatur adipisci minus voluptatibus tempora quia fugiat, ullam ratione quaerat!</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
                         </div>
                     </div>
-                    <div class="card-footer">Footer</div>
-                </div>
-                <div class="card" style="width: 300px;">
-                    <h2 class="card-header">Header</h2>
-                    <img class="card-img-top" src="placeholder_image.png"></img>
-                    <div class="card-body">
-                        <h2 class="card-title">Title</h2>
-                        <span class="card-subtitle">Subtitle</span>
-                        <div class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quaerat odio quia quibusdam accusantium fuga, tempora numquam dolorum, esse magni expedita enim in nobis vel a, minus ipsam sapiente maxime.
-                        </div>
-                    </div>
-                    <div class="card-footer">Footer</div>
                 </div>
             </div>
         </div>
