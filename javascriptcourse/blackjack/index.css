@@ -1,21 +1,24 @@
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Playfair Display', serif !important;
     background-image: url(background.jpeg);
-    background-size:cover;
-    font-weight: bold;
+    background-size: cover;
     color: white;
-    text-align: center;
 }
 
-h1 {
+#title {
     color: goldenrod;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 5%;
+    margin-top: 4%;
 }
 
 #message-el {
     font-style: italic;
+    text-align: center;
 }
 
-button {
+#start-btn, #newcard-btn {
     border: none;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -23,9 +26,32 @@ button {
     width: 150px;
     border-radius: 5px;
     color: #016f32;
+    color: maroon;
     background-color: goldenrod;
     border-radius: 2px;
     margin-bottom: 4px;
     margin-top: 4px;
 }
 
+#container {
+    margin-left: 38%;
+    margin-top: 2.5%;
+    background-image: url(brownbg.jpg);
+    background-size: cover;
+    color: whitesmoke;
+    width: 22rem;
+    font-size: 22px;
+}
+
+#cards-el, #sum-el {
+    text-align: left;
+    margin-left: 10%;
+}
+
+#player-el {
+    left: 90%;
+    height: 30px;
+    width: 70px;
+    background-color: goldenrod;
+    color: darkred !important;
+}
