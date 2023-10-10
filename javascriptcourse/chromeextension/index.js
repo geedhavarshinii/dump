@@ -1,18 +1,33 @@
 let myLeads = [];
 const inputEl = document.getElementById("input-el");
 let inputBtn = document.getElementById("input-btn");
+let dltBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el");
-let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const tabBtn = document.getElementById("tab-btn");
 
-inputBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  myLeads.push(inputEl.value);
-  inputEl.value = "";
-  localStorage.setItem("myLeads", JSON.stringify(myLeads))
-  renderLeads();
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
+  render(myLeads);
+}
+
+
+tabBtn.addEventListener("click", function () {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true},
+    function(tabs) {
+      myLeads = JSON.parse(localStorage.getItem("myLeads"))
+        ? JSON.parse(localStorage.getItem("myLeads"))
+        : [];
+      myLeads.push(tabs[0].url);
+      localStorage.setItem("myLeads", JSON.stringify(myLeads));
+      render(myLeads);
+    },
+  );
 });
 
-function renderLeads() {
+function render(leads) {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
     listItems += ` 
@@ -23,6 +38,19 @@ function renderLeads() {
             </li>
         `;
   }
-
   ulEl.innerHTML = listItems;
 }
+
+dltBtn.addEventListener("dblclick", function () {
+  localStorage.clear();
+  myLeads = [];
+  render(myLeads);
+});
+
+inputBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  myLeads.push(inputEl.value);
+  inputEl.value = "";
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  renderLeads(myLeads);
+});
