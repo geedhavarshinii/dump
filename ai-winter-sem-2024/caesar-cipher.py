@@ -18,7 +18,7 @@ def encryptdecrypt(word, key):
             deres+=chr(ord('a')+(ord(enres[i])-ord('a')-key)%26)
     return enres, deres
 
-word = input()
-key = int(input())
+word = input("Enter the word to be encrypted and decrypted: ")
+key = int(input("Enter the key to be used to shift: "))
 encrypted, decrypted = encryptdecrypt(word, key)
 print(encrypted, decrypted)
