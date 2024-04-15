@@ -71,13 +71,13 @@ def classify_statement(statement, vocab, prob_positive, prob_negative, prob_word
         return "negative"
 
 def main():
-    print("\n")
+    #print("\n")
     vocab = create_vocab(feedback)
-    print(vocab)
-    print("\n")
+    #print(vocab)
+    #print("\n")
     feature_vectors = create_feature_vectors(feedback, vocab)
-    print(feature_vectors)
-    print("\n")
+    #print(feature_vectors)
+    #print("\n")
     prob_positive, prob_negative, prob_word_positive, prob_word_negative = calculate_probabilities(feedback, vocab)
 
     new_statement = input("Enter statement to be classified: ")
