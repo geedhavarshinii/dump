@@ -12,7 +12,7 @@ def encryptdecrypt(word, key):
         char = enres[i]
         if char==" ":
             deres += " "
-        elif (ch.isupper()):
+        elif (char.isupper()):
             deres+=chr(ord('A')+(ord(enres[i])-ord('A')-key)%26)
         else:
             deres+=chr(ord('a')+(ord(enres[i])-ord('a')-key)%26)
