@@ -1,3 +1,91 @@
+#elgamal cryptography
+def modinv(x, y):
+    d = 1
+    while (d*x)%y!=1:
+        d+=1
+    return d
+
+x1 = int(input("x1: "))
+y1 = int(input("y1: "))
+x2 = int(input("x2: "))
+y2 = int(input("y2: "))
+a = int(input("a: "))
+b = int(input("b: "))
+p = int(input("p: "))
+
+if x1==x2 and y1==y2:
+    mod_inv = modinv(2*y1, p)
+    lamda = ((3*x1*x1+a)*mod_inv)%p
+    x3 = (lamda**2-x1-x2)%p
+    y3 = (lamda*(x1-x3)-y1)%p
+    print(f"the sum is {x3}, {y3}")
+
+else:
+    mod_inv = modinv(x1-x2, p)
+    lamda = ((y1-y2)*mod_inv)%p
+    x3 = (lamda**2-x1-x2)%p
+    y3 = (lamda*(x1-x3)-y1)%p
+    print(f"The sum is {x3}, {y3}")
+
+# #rsa algorithm
+# import random
+# p = int(input("Enter a prime number p: "))
+# g = int(input("Enter a number g: "))
+# class A:
+#     def __init__(self, n):
+#         self.n = n
+#     def publish(self):
+#         return (g**self.n)%p
+#     def compute_secret(self, gb):
+#         return (gb**self.n)%p
+
+# class B: 
+#     def __init__(self):
+#         self.a = random.randint(1, p)
+#         self.b = random.randint(1, p)
+#         self.arr = [self.a, self.b]
+#     def publish(self, i):
+#         return (g**self.arr[i])%p
+#     def compute_secret(self, ga, i):
+#         return (ga**self.arr[i])%p
+    
+# na = int(input("Private key of Alice: "))
+# nb = int(input("Private key of Bob: "))
+# alice = A(na)
+# bob = A(nb)
+# darth = B()
+
+# print("\nPrivate selected numbers:")
+# print(f"Alice selected number(a): {alice.n}")
+# print(f"Bob selected number (b): {bob.n}")
+# print(f"Darth selected number for Alice (C): {darth.a}")
+# print(f"Darth selected number for Bob (d): {darth.b}")
+
+# print("\nGenerating public values: ")
+# ga = alice.publish()
+# gb = bob.publish()
+# gda = darth.publish(0)
+# gdb = darth.publish(1)
+# print(f"Alice's public number (ga): {ga}")
+# print(f"Bob's public number (gb): {gb}")
+# print(f"Darth's public number for Alice (gda): {gda}")
+# print(f"Darth's public number for Bob (gdb): {gdb}")
+
+# print("the secret key is: ")
+# sa = alice.compute_secret(gda)
+# sb = bob.compute_secret(gdb)
+# print(f"Alice computed the secret key as (Ka): {sa}")
+# print(f"Bob computed secret key as (Kb): {sb}")
+
+# #dh
+# p = int(input("Enter p: "))
+# g = int(input("Enter g: "))
+# a = int(input("Enter secret key of Alice: "))
+# b = int(input("Enter secret key of Bob: "))
+# y1, y2 = pow(g, a)%p, pow(g, b)%p
+# k1, k2 = pow(y2, a)%p, pow(y1, b)%p
+# print(f"The keys are: {k1}, {k2}")
+
 # #playfair cipher
 # def playfair_cipher(pt, key, mode):
 #     alphabet = 'abcdefghiklmnopqrstuvwxyz'
