@@ -1,4 +1,5 @@
 import random
+
 def modinv(x, y):
     d = 1
     while (x*d)%y!=1:

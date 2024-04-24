@@ -1,16 +1,197 @@
-# #extended euclidean
-# def gcdExtended(a, b):
-#     if a==0:
-#         return b, 0, 1
-#     gcd, x1, y1 = gcdExtended(b%a, a)
-#     x = y1 - (b//a) * x1
-#     y = x1
-#     return gcd, x, y
+# #crt
+# def modinv(x, y):
+#     d = 1
+#     while (d * x) % y != 1:
+#         d += 1
+#     return d
 
-# a = int(input("a: "))
-# b = int(input("b: "))
-# gcd, x, y = gcdExtended(a, b)
-# print(f"gcd of {a} and {b} is {gcd}. x is {x} and y is {y}.")
+# num_input = input("Enter nums: ")
+# num = [int(x) for x in num_input.split()]
+
+# rem_input = input("Enter rems: ")
+# rem = [int(x) for x in rem_input.split()]
+
+# k = len(num)
+# M = 1
+# for i in num:
+#     M *= i
+
+# zi = [M // n for n in num]
+# yi = [modinv(zi[i], num[i]) for i in range(k)]
+
+# print("M:", M)
+# print("zi:", zi)
+# print("yi:", yi)
+
+# res = sum(rem[i] * zi[i] * yi[i] for i in range(k)) % M
+
+# print("Result:", res)
+
+
+# #rsa
+# import random
+
+# def gcd(a, b):
+#     if a==0:
+#         return b
+#     return gcd(b%a, a)
+
+# def mod_inverse(e, phi_n):
+#     d = 1
+#     while ((e*d)%phi_n != 1):
+#         d+=1
+#     return d   
+
+# def generate(p, q):
+#     n = p*q
+#     phi_n = (p-1)*(q-1)
+#     print('phi_n: ', phi_n)
+#     e = 2
+#     while gcd(e, phi_n)!=1:
+#         e = e+1
+#     print('e: ', e)
+#     d = mod_inverse(e, phi_n)
+#     print('d: ', d)
+#     return n, e, d
+
+# def encrypt(m, e, n):
+#     c = m**e%n 
+#     print(f"Encrypted message is {c}")
+#     return c
+
+# def decrypt(c, d, n):
+#     m = c**d%n 
+#     print(f"Decrypted message is {m}")   
+#     return m
+
+# p = int(input("Enter p: "))
+# q = int(input("Enter q: "))
+# m = int(input("Enter M: "))
+# n, e, d = generate(p, q)
+# c = encrypt(m, e, n)
+# decrypt(c, d, n)
+
+# #dss
+# import random
+
+# def modinv(x, y):
+#     d = 1
+#     while (x*d)%y!=1:
+#         d+=1
+#     return d
+
+# def gcd(a, b):
+#     if (a==0):
+#         return b
+#     return gcd(b%a, a)
+
+# def rand_key(p):
+#     k = 2
+#     while gcd(k, p-1)!=1:
+#         k = random.randint(2, p-2)
+#     return k
+
+# p = int(input("P: "))
+# q = int(input("q: "))
+# h = int(input("h: "))
+# m = int(input("h(M): "))
+# x = int(input("x: "))
+
+# g = (h*(p-1)//q)%p
+# y = pow(g, x)%p
+
+# print(f"public key (p, q, g, y): {p}, {q}, {g}, {y}")
+
+# k = rand_key(q)
+# r = ((pow(g, k)%p)%q)
+# kinv = modinv(k, q)
+# s = (kinv * (m+x*r))%q
+
+# print(f"Digital signature is {r} , {s}")
+
+# w = modinv(s, q)%q
+# u1 = (m * w)%q
+# u2 = (r * w)%q
+# v = ((g**u1)*(y**u2)%p)%q
+
+# if (v==r):
+#     print("verified")
+# else:
+#     print("not verified")
+
+# #hillcipher
+# def text_to_numbers(text):
+#     return [ord(char.upper()) - 65 for char in text if char.isalpha]
+
+# def numbers_to_text(numbers):
+#     return ''.join(chr(num % 26 + 65) for num in numbers)
+
+# def key_to_matrix(key, size):
+#     key_numbers = text_to_numbers(key)
+#     matrix = []
+#     index = 0
+#     for _ in range(size):
+#         row = []
+#         for _ in range(size):
+#             row.append(key_numbers[index%len(key_numbers)])
+#             index+=1
+#         matrix.append(row)
+#     return matrix
+
+# def matrix_multiply(pt_mat, key_mat):
+#     result = []
+#     for row in key_mat:
+#         value = sum(row[i]*pt_mat[i] for i in range(len(row)))
+#         result.append(value%26)
+#     return result
+
+# def encrypt(pt, key):
+#     pt_mat = text_to_numbers(pt)
+#     key_mat = key_to_matrix(key, len(pt_mat))
+#     encrypted_nums = matrix_multiply(pt_mat, key_mat)
+#     return numbers_to_text(encrypted_nums)
+
+# plaintext = input("Enter the pt: ")
+# key = input("Enter the key: ")
+# encrypted_text = encrypt(plaintext, key)
+# print(f"Encrypted text is {encrypted_text}")
+
+# #elgamal cryptography
+# import random
+
+# def modinv(x, y):
+#     d = 1
+#     while (d*x)%y!=1:
+#         d+=1
+#     return d
+
+# q = int(input("Enter q: "))
+# a = int(input("Enter a such that it is a primitive root of q: "))
+
+# #key generation by alice
+# xa = random.randint(0, q-1)
+# ya = (a**xa)%q
+# print(f"public key (q, a, ya) is {q}, {a}, {ya}")
+
+# #encryption by bob with alice's public key
+# m = int(input("Enter pt M: "))
+# k = random.randint(0, q)
+# K = (ya**k)%q
+# c1 = (a**k)%q
+# c2 = (K*m)%q
+# print(f"Cipher text is {c1}, {c2}")
+
+# #decryption by alice with alice's private key
+# Ka = (c1**xa)%q
+# Kinv = modinv(K, q)
+# M = (c2*Kinv)%q
+# print(f"Decrypted text is M : {M}")
+
+# if (M==m):
+#     print("Success")
+# else:
+#     print("failed")
+
 
 # #elgamal ds
 # import random
@@ -112,7 +293,7 @@
 #     y3 = (lamda*(x1-x3)-y1)%p
 #     print(f"The sum is {x3}, {y3}")
 
-# #rsa algorithm
+# #mitm algorithm
 # import random
 # p = int(input("Enter a prime number p: "))
 # g = int(input("Enter a number g: "))
